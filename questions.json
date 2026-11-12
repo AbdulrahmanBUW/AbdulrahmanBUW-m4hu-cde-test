@@ -1,0 +1,785 @@
+{
+ "version": 1,
+ "chapters": {
+  "ch00": {
+   "label": "0",
+   "title": {
+    "de": "Einführung",
+    "en": "Introduction",
+    "ru": "Введение"
+   }
+  },
+  "ch01": {
+   "label": "1",
+   "title": {
+    "de": "Die gemeinsame Datenumgebung",
+    "en": "The common data environment",
+    "ru": "Среда общих данных"
+   }
+  },
+  "ch02": {
+   "label": "2",
+   "title": {
+    "de": "Dateinamenskonvention",
+    "en": "File naming convention",
+    "ru": "Правила именования файлов"
+   }
+  },
+  "ch03": {
+   "label": "3",
+   "title": {
+    "de": "Versionsverfolgung",
+    "en": "Version tracking",
+    "ru": "Отслеживание версий"
+   }
+  },
+  "ch04": {
+   "label": "4",
+   "title": {
+    "de": "Prüfungsloops: das Prinzip",
+    "en": "Review loops: the principle",
+    "ru": "Циклы проверки: принцип"
+   }
+  },
+  "ch05a": {
+   "label": "5A",
+   "title": {
+    "de": "Ordnerstruktur und Freigabe für die Planung",
+    "en": "Folders and approval for design",
+    "ru": "Структура папок и утверждение для проектирования"
+   }
+  },
+  "ch05b": {
+   "label": "5B",
+   "title": {
+    "de": "Kommunikation und Ordnerstruktur für Nachunternehmer",
+    "en": "Communication and folders for subcontractors",
+    "ru": "Коммуникация и структура папок для субподрядчиков"
+   }
+  },
+  "ch06a": {
+   "label": "6A",
+   "title": {
+    "de": "Prüfungsloops für die Planung",
+    "en": "Review loops for design",
+    "ru": "Циклы проверки для проектирования"
+   }
+  },
+  "ch06b": {
+   "label": "6B",
+   "title": {
+    "de": "Prüfungsloops für Nachunternehmer",
+    "en": "Review loops for subcontractors",
+    "ru": "Циклы проверки для субподрядчиков"
+   }
+  },
+  "ch07a": {
+   "label": "7A",
+   "title": {
+    "de": "Übertragung zu Infineon",
+    "en": "Transfer to Infineon",
+    "ru": "Передача в Infineon"
+   }
+  }
+ },
+ "questions": [
+  {
+   "id": "q01_01",
+   "chapter": "ch01",
+   "beat": "b07_no_old_folders",
+   "audience": "shared",
+   "type": "single",
+   "q": {
+    "de": "Sie möchten den Stand einer Datei von gestern behalten. Was tun Sie in AF?",
+    "en": "You want to keep yesterday's state of a file. What do you do in AF?",
+    "ru": "Вы хотите сохранить вчерашнее состояние файла. Что вы делаете в AF?"
+   },
+   "options": [
+    {
+     "de": "Eine Kopie in einen Old-Ordner im Unterordner legen",
+     "en": "Put a copy into an old folder in the subfolder",
+     "ru": "Положить копию в папку old в этой подпапке"
+    },
+    {
+     "de": "Nichts extra: Ältere Versionen liegen im Versionsverlauf",
+     "en": "Nothing extra: older versions are kept in the version history (Versionsverlauf)",
+     "ru": "Ничего дополнительно: старые версии хранятся в истории версий (Versionsverlauf)"
+    },
+    {
+     "de": "Eine Kopie mit dem Datum im Dateinamen hochladen",
+     "en": "Upload a copy with the date in the file name",
+     "ru": "Загрузить копию с датой в имени файла"
+    },
+    {
+     "de": "Eine Kopie lokal auf dem eigenen Rechner speichern",
+     "en": "Save a copy locally on your own computer",
+     "ru": "Сохранить копию локально на своём компьютере"
+    }
+   ]
+  },
+  {
+   "id": "q01_02",
+   "chapter": "ch01",
+   "beat": "b09_desktop_connector",
+   "audience": "shared",
+   "type": "single",
+   "q": {
+    "de": "Wer darf in AF im Desktop-Connector arbeiten?",
+    "en": "Who is allowed to work in the Desktop Connector in AF?",
+    "ru": "Кому разрешено работать с AF через Desktop Connector?"
+   },
+   "options": [
+    {
+     "de": "Alle, solange die Internetverbindung stabil ist",
+     "en": "Everyone, as long as the internet connection is stable",
+     "ru": "Всем, пока интернет-соединение стабильно"
+    },
+    {
+     "de": "Alle, wenn sie die Attribute danach im Browser pflegen",
+     "en": "Everyone, if they maintain the attributes in the browser afterwards",
+     "ru": "Всем, если потом заполнять атрибуты в браузере"
+    },
+    {
+     "de": "Nur die CAD-Abteilung",
+     "en": "Only the CAD department",
+     "ru": "Только CAD-отделу"
+    },
+    {
+     "de": "Nur der Projektleiter",
+     "en": "Only the project manager",
+     "ru": "Только руководителю проекта"
+    }
+   ]
+  },
+  {
+   "id": "q01_03",
+   "chapter": "ch01",
+   "beat": "b11_who_when",
+   "audience": "shared",
+   "type": "truefalse",
+   "q": {
+    "de": "Ihr Namenskürzel gehört in den Dateinamen, damit andere sehen, wer die Datei zuletzt bearbeitet hat.",
+    "en": "Your initials belong in the file name so that others can see who last edited the file.",
+    "ru": "Ваши инициалы должны быть в имени файла, чтобы другие видели, кто последним редактировал файл."
+   },
+   "options": [
+    {
+     "de": "Richtig",
+     "en": "True",
+     "ru": "Верно"
+    },
+    {
+     "de": "Falsch",
+     "en": "False",
+     "ru": "Неверно"
+    }
+   ]
+  },
+  {
+   "id": "q02_01",
+   "chapter": "ch02",
+   "beat": "b05_rules",
+   "audience": "shared",
+   "type": "truefalse",
+   "q": {
+    "de": "Der Unterstrich trennt die Attribute im Dateinamen; innerhalb eines Attributs, auch im Plain Text, ist er verboten.",
+    "en": "The underscore separates the attributes in the file name; inside an attribute, even in Plain Text, it is not allowed.",
+    "ru": "Нижнее подчёркивание разделяет атрибуты в имени файла; внутри атрибута, даже в Plain Text, оно запрещено."
+   },
+   "options": [
+    {
+     "de": "Richtig",
+     "en": "True",
+     "ru": "Верно"
+    },
+    {
+     "de": "Falsch",
+     "en": "False",
+     "ru": "Неверно"
+    }
+   ]
+  },
+  {
+   "id": "q02_02",
+   "chapter": "ch02",
+   "beat": "b10_number",
+   "audience": "shared",
+   "type": "single",
+   "q": {
+    "de": "Sie haben CMPP64-47_X-X_BA_EQB_001_DX inhaltlich überarbeitet. Wie laden Sie die geänderte Datei hoch?",
+    "en": "You have revised CMPP64-47_X-X_BA_EQB_001_DX. How do you upload the changed file?",
+    "ru": "Вы доработали файл CMPP64-47_X-X_BA_EQB_001_DX. Как загрузить изменённый файл?"
+   },
+   "options": [
+    {
+     "de": "Als …_EQB_002_DX, damit der neue Stand erkennbar ist",
+     "en": "As …_EQB_002_DX, so that the new state is recognisable",
+     "ru": "Как …_EQB_002_DX, чтобы новое состояние было заметно"
+    },
+    {
+     "de": "Als …_EQB_001_DX_V2",
+     "en": "As …_EQB_001_DX_V2",
+     "ru": "Как …_EQB_001_DX_V2"
+    },
+    {
+     "de": "Mit dem Datum im Plain Text",
+     "en": "With the date in the Plain Text",
+     "ru": "С датой в Plain Text"
+    },
+    {
+     "de": "Unter demselben Namen; das CDE zählt die Version hoch",
+     "en": "Under the same name; the CDE counts the version up",
+     "ru": "Под тем же именем; CDE само увеличит номер версии"
+    }
+   ]
+  },
+  {
+   "id": "q02_03",
+   "chapter": "ch02",
+   "beat": "b14_revision_phases",
+   "audience": "shared",
+   "type": "single",
+   "q": {
+    "de": "Ein Dokument ist in der Ausführung, also frei zur Ausführung. Welche Revision passt?",
+    "en": "A document is in the construction phase, frei zur Ausführung (released for construction). Which Revision fits?",
+    "ru": "Документ на этапе строительства, «frei zur Ausführung» (допущен к производству работ). Какая Revision подходит?"
+   },
+   "options": [
+    {
+     "de": "1.3",
+     "en": "1.3",
+     "ru": "1.3"
+    },
+    {
+     "de": "02.00",
+     "en": "02.00",
+     "ru": "02.00"
+    },
+    {
+     "de": "2.2",
+     "en": "2.2",
+     "ru": "2.2"
+    },
+    {
+     "de": "3.1",
+     "en": "3.1",
+     "ru": "3.1"
+    }
+   ]
+  },
+  {
+   "id": "q03_01",
+   "chapter": "ch03",
+   "beat": "b03_rule",
+   "audience": "shared",
+   "type": "single",
+   "q": {
+    "de": "Sie haben ein Dokument überarbeitet, der Inhalt ist derselbe. Wie legen Sie es im CDE ab?",
+    "en": "You have revised a document; the content is the same. How do you store it in the CDE?",
+    "ru": "Вы доработали документ, содержание то же. Как сохранить его в CDE?"
+   },
+   "options": [
+    {
+     "de": "Als neue Datei mit der Endung _002 neben _001",
+     "en": "As a new file ending in _002 next to _001",
+     "ru": "Как новый файл с окончанием _002 рядом с _001"
+    },
+    {
+     "de": "Mit identischem Namen erneut hochladen, als neue Version",
+     "en": "Upload it again with the identical name, as a new version",
+     "ru": "Загрузить снова с тем же самым именем, как новую версию"
+    },
+    {
+     "de": "_001 löschen und die neue Datei als _002 hochladen",
+     "en": "Delete _001 and upload the new file as _002",
+     "ru": "Удалить _001 и загрузить новый файл как _002"
+    },
+    {
+     "de": "_001 in einen Old-Ordner verschieben und die neue Datei hochladen",
+     "en": "Move _001 into an old folder and upload the new file",
+     "ru": "Переместить _001 в папку old и загрузить новый файл"
+    }
+   ]
+  },
+  {
+   "id": "q03_02",
+   "chapter": "ch03",
+   "beat": "b11_new_content",
+   "audience": "shared",
+   "type": "single",
+   "q": {
+    "de": "Ein Dokument hat wirklich einen anderen Inhalt als das bestehende. Was ist richtig?",
+    "en": "A document really has different content from the existing one. What is correct?",
+    "ru": "Содержание документа действительно отличается от существующего. Что правильно?"
+   },
+   "options": [
+    {
+     "de": "Als neue Version des bestehenden Dokuments hochladen",
+     "en": "Upload it as a new version of the existing document",
+     "ru": "Загрузить как новую версию существующего документа"
+    },
+    {
+     "de": "Gleiche Nummer behalten, den Unterschied nur im Feld Beschreibung nennen",
+     "en": "Keep the same number and state the difference only in the Beschreibung (Description) field",
+     "ru": "Оставить тот же номер и указать разницу только в поле «Beschreibung» (описание)"
+    },
+    {
+     "de": "Neue laufende Nummer, das Feld Beschreibung leer lassen",
+     "en": "New running number, leave the Beschreibung (Description) field empty",
+     "ru": "Новый порядковый номер, поле «Beschreibung» (описание) оставить пустым"
+    },
+    {
+     "de": "Neue laufende Nummer und das Feld Beschreibung korrekt ausfüllen",
+     "en": "New running number, and fill in the Beschreibung (Description) field correctly",
+     "ru": "Новый порядковый номер и правильно заполненное поле «Beschreibung» (описание)"
+    }
+   ]
+  },
+  {
+   "id": "q03_03",
+   "chapter": "ch03",
+   "beat": "b09_case2_answer",
+   "audience": "shared",
+   "type": "truefalse",
+   "q": {
+    "de": "Liegen ein freigegebenes _001 und ein neueres, nicht freigegebenes _002 nebeneinander, ist sofort klar, welches gilt.",
+    "en": "If an approved _001 and a newer, unapproved _002 sit side by side, it is immediately clear which one is valid.",
+    "ru": "Если рядом лежат утверждённый _001 и более новый, неутверждённый _002, сразу понятно, какой из них действителен."
+   },
+   "options": [
+    {
+     "de": "Richtig",
+     "en": "True",
+     "ru": "Верно"
+    },
+    {
+     "de": "Falsch",
+     "en": "False",
+     "ru": "Неверно"
+    }
+   ]
+  },
+  {
+   "id": "q04_01",
+   "chapter": "ch04",
+   "beat": "b06_decision_step",
+   "audience": "shared",
+   "type": "single",
+   "q": {
+    "de": "Wer entscheidet im Schritt Entscheidung über das Dokument?",
+    "en": "Who decides on the document in the step Entscheidung (decision)?",
+    "ru": "Кто принимает решение по документу на этапе «Entscheidung» (решение)?"
+   },
+   "options": [
+    {
+     "de": "Der Projektleiter oder eine von ihm beauftragte Person",
+     "en": "The project manager or a person they appoint",
+     "ru": "Руководитель проекта или назначенное им лицо"
+    },
+    {
+     "de": "Alle Prüfer gemeinsam, mit Mehrheit",
+     "en": "All reviewers together, by majority",
+     "ru": "Все проверяющие вместе, большинством голосов"
+    },
+    {
+     "de": "Der Initiator, nachdem er die Kommentare eingearbeitet hat",
+     "en": "The initiator, after addressing the comments",
+     "ru": "Инициатор, после того как учтёт комментарии"
+    },
+    {
+     "de": "Die CAD-Abteilung",
+     "en": "The CAD department",
+     "ru": "Отдел CAD"
+    }
+   ]
+  },
+  {
+   "id": "q04_02",
+   "chapter": "ch04",
+   "beat": "b09_statuses",
+   "audience": "shared",
+   "type": "single",
+   "q": {
+    "de": "Ihre Überprüfung steht auf OFFEN - wartet auf Initiator. Was bedeutet das?",
+    "en": "Your review shows OFFEN - wartet auf Initiator (open, waiting for the initiator). What does that mean?",
+    "ru": "Ваша проверка в статусе «OFFEN - wartet auf Initiator» (открыто, ждёт инициатора). Что это значит?"
+   },
+   "options": [
+    {
+     "de": "Der Prüfer muss die Überprüfung noch starten",
+     "en": "The reviewer still has to start the review",
+     "ru": "Проверяющий ещё должен начать проверку"
+    },
+    {
+     "de": "Die Prüfung wurde abgebrochen; Sie starten einen neuen Prüfungsloop",
+     "en": "The review was cancelled; you start a new review loop",
+     "ru": "Проверка отменена; нужно запустить новый цикл проверки"
+    },
+    {
+     "de": "Der Initiator muss die Datei aktualisieren und für eine neue Runde einreichen",
+     "en": "The initiator has to update the file and submit it for a new round",
+     "ru": "Инициатор должен обновить файл и отправить его на новый раунд"
+    },
+    {
+     "de": "Die Datei ist genehmigt und wird in den Zielordner kopiert",
+     "en": "The file is approved and is being copied to the target folder",
+     "ru": "Файл утверждён и копируется в целевую папку"
+    }
+   ]
+  },
+  {
+   "id": "q04_03",
+   "chapter": "ch04",
+   "beat": "b07_rounds",
+   "audience": "shared",
+   "type": "truefalse",
+   "q": {
+    "de": "Wird ein Dokument an den Initiator zurückgeschickt, läuft derselbe Prüfungsloop in einer neuen Runde weiter.",
+    "en": "If a document is sent back to the initiator, the same review loop continues in a new round.",
+    "ru": "Если документ возвращают инициатору, тот же цикл проверки продолжается в новом раунде."
+   },
+   "options": [
+    {
+     "de": "Richtig",
+     "en": "True",
+     "ru": "Верно"
+    },
+    {
+     "de": "Falsch",
+     "en": "False",
+     "ru": "Неверно"
+    }
+   ]
+  },
+  {
+   "id": "q05a_01",
+   "chapter": "ch05a",
+   "beat": "b07_approved_only_via_review",
+   "audience": "designers",
+   "type": "single",
+   "q": {
+    "de": "Ihre Datei in 04_Design soll an den Kunden. Wie kommt sie nach 10_Approved_docs/01_Internally?",
+    "en": "Your file in 04_Design is meant for the client. How does it get into 10_Approved_docs/01_Internally?",
+    "ru": "Ваш файл из 04_Design предназначен для заказчика. Как он попадает в 10_Approved_docs/01_Internally?"
+   },
+   "options": [
+    {
+     "de": "Sie kopieren sie manuell in den passenden Process-Area-Ordner",
+     "en": "You copy it by hand into the matching Process Area folder",
+     "ru": "Вы вручную копируете его в папку нужной Process Area"
+    },
+    {
+     "de": "Über eine Prüfung: Nach erfolgreichem Abschluss kopiert AF sie automatisch",
+     "en": "Through a review: once it is completed successfully, AF copies it automatically",
+     "ru": "Через проверку: после её успешного завершения AF копирует файл автоматически"
+    },
+    {
+     "de": "Sie laden sie direkt in 01_Internally hoch",
+     "en": "You upload it directly into 01_Internally",
+     "ru": "Вы загружаете его прямо в 01_Internally"
+    },
+    {
+     "de": "Sie verschieben sie aus 04_Design dorthin",
+     "en": "You move it there from 04_Design",
+     "ru": "Вы перемещаете его туда из 04_Design"
+    }
+   ]
+  },
+  {
+   "id": "q05a_02",
+   "chapter": "ch05a",
+   "beat": "b12_controlled_docs",
+   "audience": "designers",
+   "type": "single",
+   "q": {
+    "de": "Welche Regel gilt für DEAXO-Mitarbeiter im Ordner 05. Controlled docs unter 11_Bridge_DX-IFX?",
+    "en": "Which rule applies to DEAXO employees in the folder 05. Controlled docs under 11_Bridge_DX-IFX?",
+    "ru": "Какое правило действует для сотрудников DEAXO в папке 05. Controlled docs внутри 11_Bridge_DX-IFX?"
+   },
+   "options": [
+    {
+     "de": "Sie dürfen dort eigene Dokumente für Infineon ablegen",
+     "en": "You may store your own documents for Infineon there",
+     "ru": "Там можно сохранять свои документы для Infineon"
+    },
+    {
+     "de": "Sie dürfen dort veraltete Dokumente löschen",
+     "en": "You may delete outdated documents there",
+     "ru": "Там можно удалять устаревшие документы"
+    },
+    {
+     "de": "Sie dürfen Dokumente ändern, wenn der Name gleich bleibt",
+     "en": "You may change documents as long as the name stays the same",
+     "ru": "Можно изменять документы, если имя не меняется"
+    },
+    {
+     "de": "Sie dürfen dort nichts speichern, ändern oder löschen",
+     "en": "You must not save, change or delete anything there",
+     "ru": "Там нельзя ничего сохранять, изменять или удалять"
+    }
+   ]
+  },
+  {
+   "id": "q06a_01",
+   "chapter": "ch06a",
+   "beat": "b04_choose_loop",
+   "audience": "designers",
+   "type": "single",
+   "q": {
+    "de": "Womit muss der Name des Prüfungsloops übereinstimmen, den Sie als Genehmigungsprüfung starten?",
+    "en": "What must the name of the review loop you start as an approval review match?",
+    "ru": "С чем должно совпадать название цикла проверки, который вы запускаете как проверку на утверждение?"
+   },
+   "options": [
+    {
+     "de": "Mit dem Attribut Process Area Ihrer Datei",
+     "en": "The attribute Process Area of your file",
+     "ru": "С атрибутом Process Area вашего файла"
+    },
+    {
+     "de": "Mit der Tool ID Ihrer Datei",
+     "en": "The Tool ID of your file",
+     "ru": "С Tool ID вашего файла"
+    },
+    {
+     "de": "Mit dem Namen Ihres Arbeitsordners in 04_Design",
+     "en": "The name of your working folder in 04_Design",
+     "ru": "С именем вашей рабочей папки в 04_Design"
+    },
+    {
+     "de": "Mit dem Plain Text Ihrer Datei",
+     "en": "The Plain Text of your file",
+     "ru": "С Plain Text вашего файла"
+    }
+   ]
+  },
+  {
+   "id": "q06a_02",
+   "chapter": "ch06a",
+   "beat": "b07_wrong_review",
+   "audience": "designers",
+   "type": "single",
+   "q": {
+    "de": "Sie merken, dass Sie von Anfang an die falsche Genehmigungsprüfung gewählt haben. Was tun Sie?",
+    "en": "You notice that you chose the wrong approval review from the start. What do you do?",
+    "ru": "Вы замечаете, что с самого начала выбрали не ту проверку на утверждение. Что вы делаете?"
+   },
+   "options": [
+    {
+     "de": "Weiterlaufen lassen und die Datei danach manuell in den richtigen Ordner kopieren",
+     "en": "Let it run and then copy the file by hand into the right folder",
+     "ru": "Дать ей пройти, а потом вручную скопировать файл в нужную папку"
+    },
+    {
+     "de": "Weiterlaufen lassen, die Bridgeprüfung korrigiert das automatisch",
+     "en": "Let it run; the bridge review corrects it automatically",
+     "ru": "Дать ей пройти: проверка Bridge исправит это автоматически"
+    },
+    {
+     "de": "Die laufende Prüfung abbrechen und die richtige starten",
+     "en": "Cancel the running review and start the right one",
+     "ru": "Отменить текущую проверку и запустить правильную"
+    },
+    {
+     "de": "Die Process Area der Datei an die gewählte Prüfung anpassen",
+     "en": "Change the file's Process Area to match the chosen review",
+     "ru": "Изменить Process Area файла под выбранную проверку"
+    }
+   ]
+  },
+  {
+   "id": "q07a_01",
+   "chapter": "ch07a",
+   "beat": "b09_project_link",
+   "audience": "designers",
+   "type": "single",
+   "q": {
+    "de": "Was passiert mit einer genehmigten Datei nach der Bridgeprüfung?",
+    "en": "What happens to an approved file after the bridge review?",
+    "ru": "Что происходит с утверждённым файлом после проверки Bridge?"
+   },
+   "options": [
+    {
+     "de": "Sie wird per E-Mail an Infineon gesendet",
+     "en": "It is sent to Infineon by e-mail",
+     "ru": "Его отправляют в Infineon по электронной почте"
+    },
+    {
+     "de": "Sie muss von Hand in das AF von Infineon hochgeladen werden",
+     "en": "It has to be uploaded to Infineon's AF by hand",
+     "ru": "Его нужно вручную загрузить в AF Infineon"
+    },
+    {
+     "de": "Sie wird nach 11_Bridge_DX-IFX kopiert und automatisch mit dem AF von Infineon synchronisiert",
+     "en": "It is copied to 11_Bridge_DX-IFX and synchronised automatically with Infineon's AF",
+     "ru": "Его копируют в 11_Bridge_DX-IFX и автоматически синхронизируют с AF Infineon"
+    },
+    {
+     "de": "Sie bleibt in 10_Approved_docs, bis Infineon sie anfordert",
+     "en": "It stays in 10_Approved_docs until Infineon requests it",
+     "ru": "Он остаётся в 10_Approved_docs, пока Infineon его не запросит"
+    }
+   ]
+  },
+  {
+   "id": "q07a_02",
+   "chapter": "ch07a",
+   "beat": "b05_bridge_tool",
+   "audience": "designers",
+   "type": "single",
+   "q": {
+    "de": "Was erzeugt das Transfer-Tool Übertragungen bei einer Übertragung im Zielprojekt?",
+    "en": "What does the transfer tool Übertragungen create in the target project during a transfer?",
+    "ru": "Что создаёт инструмент передачи «Übertragungen» в целевом проекте при передаче?"
+   },
+   "options": [
+    {
+     "de": "Nur einen Link auf die Datei im Quellprojekt",
+     "en": "Only a link to the file in the source project",
+     "ru": "Только ссылку на файл в исходном проекте"
+    },
+    {
+     "de": "Nichts: Es verschiebt die Originale ins Zielprojekt",
+     "en": "Nothing new: it moves the originals into the target project",
+     "ru": "Ничего нового: он перемещает оригиналы в целевой проект"
+    },
+    {
+     "de": "Einzelne Dateien, aber nie ganze Ordner",
+     "en": "Single files, but never whole folders",
+     "ru": "Отдельные файлы, но никогда целые папки"
+    },
+    {
+     "de": "Kopien der Inhalte",
+     "en": "Copies of the content",
+     "ru": "Копии содержимого"
+    }
+   ]
+  },
+  {
+   "id": "q05b_01",
+   "chapter": "ch05b",
+   "beat": "b02_email_rule",
+   "audience": "subcontractors",
+   "type": "single",
+   "q": {
+    "de": "Was schreiben Sie in den Betreff einer E-Mail an den CDE-Support?",
+    "en": "What do you write in the subject line of an e-mail to CDE support?",
+    "ru": "Что вы пишете в теме письма в поддержку CDE?"
+   },
+   "options": [
+    {
+     "de": "Projekt oder Projektnummer und das Thema",
+     "en": "The project or project number, and the topic",
+     "ru": "Проект или номер проекта, а также тему"
+    },
+    {
+     "de": "Nur das Thema, zum Beispiel Freigabe benötigt",
+     "en": "Only the topic, for example Freigabe benötigt (approval needed)",
+     "ru": "Только тему, например «Freigabe benötigt» (требуется утверждение)"
+    },
+    {
+     "de": "Ihren Firmennamen und das Datum",
+     "en": "Your company name and the date",
+     "ru": "Название вашей фирмы и дату"
+    },
+    {
+     "de": "Nur den Dateinamen des betroffenen Dokuments",
+     "en": "Only the file name of the document concerned",
+     "ru": "Только имя файла, о котором идёт речь"
+    }
+   ]
+  },
+  {
+   "id": "q05b_02",
+   "chapter": "ch05b",
+   "beat": "b10_new_folders",
+   "audience": "subcontractors",
+   "type": "truefalse",
+   "q": {
+    "de": "Passt ein bestehender Ordner nicht, dürfen Sie ihn in AF durch einen eigenen neuen Ordner ersetzen.",
+    "en": "If an existing folder does not fit, you may replace it in AF with a new folder of your own.",
+    "ru": "Если существующая папка не подходит, в AF её можно заменить собственной новой папкой."
+   },
+   "options": [
+    {
+     "de": "Richtig",
+     "en": "True",
+     "ru": "Верно"
+    },
+    {
+     "de": "Falsch",
+     "en": "False",
+     "ru": "Неверно"
+    }
+   ]
+  },
+  {
+   "id": "q06b_01",
+   "chapter": "ch06b",
+   "beat": "b05_review_name",
+   "audience": "subcontractors",
+   "type": "single",
+   "q": {
+    "de": "Wie füllen Sie beim Start eines Prüfungsloops in AF das Feld Überprüfungsname aus?",
+    "en": "When you start a review loop in AF, how do you fill in the field Überprüfungsname (review name)?",
+    "ru": "Как заполнить поле «Überprüfungsname» (название проверки) при запуске цикла проверки в AF?"
+   },
+   "options": [
+    {
+     "de": "Gar nicht, es wird automatisch aus dem Dateinamen übernommen",
+     "en": "Not at all; it is taken automatically from the file name",
+     "ru": "Никак: оно автоматически берётся из имени файла"
+    },
+    {
+     "de": "Manuell, mit Tool ID, iFLS-Code oder Working Package und Plain Text",
+     "en": "Manually, with the Tool ID, the iFLS code or Working Package, and the Plain Text",
+     "ru": "Вручную: Tool ID, код iFLS или Working Package и Plain Text"
+    },
+    {
+     "de": "Manuell, der Name des Genehmigungsablaufs genügt",
+     "en": "Manually; the name of the Genehmigungsablauf (approval workflow) is enough",
+     "ru": "Вручную: достаточно названия «Genehmigungsablauf» (процесса утверждения)"
+    },
+    {
+     "de": "Manuell, aber nur bei DX_CONSTRUCTION_3DM_AS_BUILT",
+     "en": "Manually, but only for DX_CONSTRUCTION_3DM_AS_BUILT",
+     "ru": "Вручную, но только для DX_CONSTRUCTION_3DM_AS_BUILT"
+    }
+   ]
+  },
+  {
+   "id": "q06b_02",
+   "chapter": "ch06b",
+   "beat": "b08_3d_answer",
+   "audience": "subcontractors",
+   "type": "single",
+   "q": {
+    "de": "Ein As-Built-3D-Modell liegt als IFC-, NWC- und RVT-Datei vor. Wie reichen Sie es ein?",
+    "en": "An as-built 3D model exists as an IFC, NWC and RVT file. How do you submit it?",
+    "ru": "3D-модель as-built есть в виде файлов IFC, NWC и RVT. Как её подать?"
+   },
+   "options": [
+    {
+     "de": "Drei Loops über DX_CONSTRUCTION_3DM_AS_BUILT, einen pro Format",
+     "en": "Three loops via DX_CONSTRUCTION_3DM_AS_BUILT, one per format",
+     "ru": "Три цикла через DX_CONSTRUCTION_3DM_AS_BUILT, по одному на формат"
+    },
+    {
+     "de": "Ein Loop über DX_CONSTRUCTION_EQB_PFD_PROTOKOLL mit allen drei Dateien",
+     "en": "One loop via DX_CONSTRUCTION_EQB_PFD_PROTOKOLL with all three files",
+     "ru": "Один цикл через DX_CONSTRUCTION_EQB_PFD_PROTOKOLL со всеми тремя файлами"
+    },
+    {
+     "de": "Ein Loop über DX_CONSTRUCTION_3DM_AS_BUILT mit allen drei Dateien",
+     "en": "One loop via DX_CONSTRUCTION_3DM_AS_BUILT with all three files",
+     "ru": "Один цикл через DX_CONSTRUCTION_3DM_AS_BUILT со всеми тремя файлами"
+    },
+    {
+     "de": "Nur die IFC-Datei über DX_CONSTRUCTION_3DM_AS_BUILT",
+     "en": "Only the IFC file via DX_CONSTRUCTION_3DM_AS_BUILT",
+     "ru": "Только файл IFC через DX_CONSTRUCTION_3DM_AS_BUILT"
+    }
+   ]
+  }
+ ]
+}
