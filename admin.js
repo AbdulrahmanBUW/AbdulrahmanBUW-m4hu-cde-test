@@ -17,14 +17,23 @@
 
   function signIn() {
     app.textContent = "";
-    var msg = el("p", { class: "hint" });
-    var inp = el("input", { type: "email", id: "mail", autocomplete: "email" });
+    var msg = el("p", { class: "hint", role: "status" });
+    var inp = el("input", { type: "email", id: "mail", autocomplete: "username" });
+    var pw = el("input", { type: "password", id: "pw", autocomplete: "current-password" });
+    function mail() { return inp.value.trim().toLowerCase(); }
+    var link = el("button", { class: "btn ghost", type: "button", text: "Stattdessen Anmeldelink per E-Mail", onclick: function () {
+      if (!mail()) { msg.textContent = "Bitte zuerst die E-Mail-Adresse eingeben."; return; }
+      sb.auth.signInWithOtp({ email: mail(), options: { emailRedirectTo: location.href.split("#")[0], shouldCreateUser: false } })
+        .then(function (r) { msg.textContent = r.error ? "Fehler: " + r.error.message : "Link gesendet. Bitte E-Mail öffnen und den Link in diesem Browser anklicken."; });
+    } });
     var f = el("form", { class: "card", onsubmit: function (e) {
       e.preventDefault();
-      sb.auth.signInWithOtp({ email: inp.value.trim().toLowerCase(), options: { emailRedirectTo: location.href.split("#")[0], shouldCreateUser: true } })
-        .then(function (r) { msg.textContent = r.error ? "Fehler: " + r.error.message : "Link gesendet. Bitte E-Mail öffnen und den Link in diesem Browser anklicken."; });
+      msg.textContent = "Anmeldung …";
+      sb.auth.signInWithPassword({ email: mail(), password: pw.value })
+        .then(function (r) { if (r.error) msg.textContent = "Anmeldung fehlgeschlagen: E-Mail oder Passwort falsch."; else pw.value = ""; });
     } }, [el("label", { for: "mail", text: "E-Mail-Adresse (Administrator)" }), inp,
-         el("div", { class: "row" }, [el("span"), el("button", { class: "btn", type: "submit", text: "Anmeldelink senden" })]), msg]);
+         el("label", { for: "pw", text: "Passwort" }), pw,
+         el("div", { class: "row" }, [link, el("button", { class: "btn", type: "submit", text: "Anmelden" })]), msg]);
     app.appendChild(el("h1", { text: "Testergebnisse" }));
     app.appendChild(el("p", { class: "lead", text: "Nur E-Mail-Adressen aus der Admin-Liste sehen Ergebnisse." }));
     app.appendChild(f);
