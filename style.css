@@ -55,3 +55,5 @@ th { color: var(--grey); font-weight: 700; }
 .wide { max-width: 1200px; }
 @media (max-width: 560px) { h1 { font-size: 25px; } .card { padding: 18px; } .row { flex-direction: column-reverse; align-items: stretch; } .btn { width: 100%; } }
 @media (prefers-reduced-motion: reduce) { .progress i { transition: none; } }
+
+h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: none; }

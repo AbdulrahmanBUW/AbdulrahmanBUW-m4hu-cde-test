@@ -80,7 +80,7 @@
     f.appendChild(el("label", { text: t("group") }));
     var grp = el("div", { class: "choice", role: "radiogroup" });
     ["designers", "subcontractors"].forEach(function (b) {
-      var inp = el("input", { type: "radio", name: "branch", value: b, onchange: function () { S.who.branch = b; update(); } });
+      var inp = el("input", { type: "radio", name: "branch", value: b, "aria-label": t(b), onchange: function () { S.who.branch = b; update(); } });
       if (S.who.branch === b) inp.checked = true;
       grp.appendChild(el("label", { class: "opt" }, [inp, el("span", { text: t(b) })]));
     });
