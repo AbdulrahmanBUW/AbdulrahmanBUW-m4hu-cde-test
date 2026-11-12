@@ -731,9 +731,9 @@
      "ru": "Никак: оно автоматически берётся из имени файла"
     },
     {
-     "de": "Manuell, mit Tool ID, iFLS-Code oder Working Package und Plain Text",
-     "en": "Manually, with the Tool ID, the iFLS code or Working Package, and the Plain Text",
-     "ru": "Вручную: Tool ID, код iFLS или Working Package и Plain Text"
+     "de": "Manuell, mit Tool ID und Plain Text",
+     "en": "Manually, with the Tool ID and a Plain Text",
+     "ru": "Вручную: Tool ID и Plain Text"
     },
     {
      "de": "Manuell, der Name des Genehmigungsablaufs genügt",
