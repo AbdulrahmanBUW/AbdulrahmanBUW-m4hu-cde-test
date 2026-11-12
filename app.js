@@ -168,7 +168,7 @@
   document.querySelectorAll(".langs button").forEach(function (b) {
     b.addEventListener("click", function () { S.lang = b.dataset.lang; try { localStorage.setItem("cdeTestLang", S.lang); } catch (e) {} render(); });
   });
-  fetch("questions.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); })
+  fetch("questions.json?v=" + Date.now(), { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (d) { S.data = d; render(); })
     .catch(function () { S.error = t("errLoad"); render(); });
   render();
